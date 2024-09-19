@@ -1,10 +1,9 @@
-
-
 const moon=document.getElementById('moon');
 const sun=document.getElementById('sun');
 const body=document.querySelector('body');
 const para=document.querySelector('p');
 const navlink=document.querySelectorAll('a');
+const menuicon=document.getElementById('menu-icon');
 
 
 moon.addEventListener('click',()=>{
@@ -17,6 +16,7 @@ moon.addEventListener('click',()=>{
     })
     sun.style.color="orange";
     moon.style.color="gray";
+    menuicon.style.color="white";
 })
 
 sun.addEventListener('click',()=>{
@@ -29,6 +29,7 @@ sun.addEventListener('click',()=>{
     })
     sun.style.color="gray";
     moon.style.color="black";
+    menuicon.style.color="black";
 })
 
 
