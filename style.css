@@ -1,0 +1,287 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    max-height: 100%;
+    width: 100%;
+    
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+header ul li{
+    display: inline-block;
+    
+}
+header ul li a{
+    text-decoration: none;
+    margin-right: 20px;
+    color: black;
+    font-weight: 700;
+    transition: 0.5s;
+    
+}
+header .logo{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5em;
+    transition: 0.5s;
+    margin-left: 20px;
+}
+.logo span{
+    color: rgb(255, 187, 0);
+}
+.content{
+    min-height: 60vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 20px;
+    padding: 20px;
+    gap: 5px;
+    transition: 4ms;
+}
+.content h2{
+    font-size: 3em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 0.5s;
+}
+.content p{
+    font-size: 1.5em;
+    transition: 0.5s;
+}
+.content span{
+    color: rgb(255, 187, 0);
+}
+.btn-container{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;  
+}
+.btns{
+    color: white;
+    border: none;
+    outline: none;
+    letter-spacing: 0.05em;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#join-btn{
+    background-color: orange;
+    padding: 10px;
+}
+#chat-btn{
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    color: black;
+}
+
+.icon{
+    display: flex;
+    margin-top: 5%;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+    
+    
+}
+#chat-btn:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(243, 243, 243);
+    transition: 0.5s;
+}
+#moon{
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+#sun{
+    color: rgb(114, 112, 109);
+    cursor: pointer;
+}
+
+/* Mobile view for screens smaller than 768px (Tablets, Phones) */
+@media (max-width: 768px) {
+
+    /* Header Adjustments */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+    
+    header ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+    }
+    
+    header ul li {
+        margin-bottom: 10px;
+    }
+
+    .logo {
+        margin-left: 0;
+        font-size: 1.3em;
+    }
+
+    /* Content Section */
+    .content {
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        margin: 0;
+    }
+
+    .content h2 {
+        font-size: 2em;
+    }
+
+    .content p {
+        font-size: 1.2em;
+    }
+
+    /* Buttons */
+    .btn-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #join-btn, #chat-btn {
+        width: 100%;
+        padding: 15px;
+        font-size: 1em;
+    }
+
+    /* Icon Section */
+    .dark-light-mode {
+        margin-top: 20px;
+    }
+}
+
+/* Mobile view for screens smaller than 480px (Phones) */
+@media (max-width: 480px) {
+
+    /* Header Adjustments */
+    header {
+        padding: 10px 0;
+    }
+
+    header ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header ul li {
+        margin-bottom: 10px;
+    }
+
+    .logo {
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    /* Content Section */
+    .content {
+        padding: 10px;
+        margin: 0;
+    }
+
+    .content h2 {
+        font-size: 1.8em;
+    }
+
+    .content p {
+        font-size: 1em;
+    }
+
+    /* Buttons */
+    .btn-container {
+        width: 100%;
+    }
+
+    #join-btn, #chat-btn {
+        width: 100%;
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    /* Icon Section */
+    .dark-light-mode {
+        margin-top: 15px;
+    }
+
+    .icon {
+        gap: 10px;
+    }
+}
+
+/* General Header Layout */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Position the menu icon beside the logo */
+.menu-icon {
+    display: none; /* Hidden by default (shown on mobile) */
+    cursor: pointer;
+    font-size: 1.8em;
+    color: black;
+    margin-left: 20px;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+
+    /* Flexbox for the header to align logo and menu icon side by side */
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /* Display the menu icon next to the logo */
+    .menu-icon {
+        display: block; /* Show the menu icon on mobile */
+    }
+
+    /* Initially hide the navigation links */
+    header ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Show the nav when 'show' class is toggled */
+    header ul.show {
+        display: flex;
+    }
+
+    /* Styling for the navigation links in mobile */
+    header ul li {
+        margin-bottom: 10px;
+    }
+
+    header ul li a {
+        display: block;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+/* Hide the menu icon on larger screens (desktop view) */
+@media (min-width: 769px) {
+    .menu-icon {
+        display: none;
+    }
+}

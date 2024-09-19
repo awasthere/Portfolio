@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+</head>
+<body>
+    <section class="banner">
+        <header>
+            <h1><a href="#" class="logo">aryan<span>X</span>verse</a></h1>
+            <div class="menu-icon" id="menu-icon">
+                <ion-icon size="large" name="menu-outline"></ion-icon>
+            </div>
+            <ul id="nav-links">
+                <li><a class="nav-link" href="#">Home</a></li>
+                <li><a class="nav-link" href="#">About</a></li>
+                <li><a class="nav-link" href="#">Work</a></li>
+                <li><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+        </header>
+        
+    </section>
+    <section class="content">
+        <h2>I am <span id="text"></span></h2>
+        <p>Let's Break the Matrix</p>
+        <div class="btn-container">
+            <button class="btns" id="join-btn">Join Us</button>
+            <button class="btns" id="chat-btn">Let's Chat</button>
+        </div>
+    </section>
+    <section class="dark-light-mode">
+        <div class="icon">
+            <ion-icon size="large" name="moon-outline" id="moon"></ion-icon>
+            <ion-icon size="large" name="sunny-outline" id="sun"></ion-icon>
+        </div>
+    </section>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <script src="app.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        let type= new Typed("#text",{
+        strings:["Aryan","Coder","Student","Learner"],
+        loop:true,
+        typeSpeed:50,
+        backSpeed:50,
+        backdelay:1000
+    })
+    </script>
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.getElementById('nav-links');
+    
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    </script>
+    
+</body>
+</html>
